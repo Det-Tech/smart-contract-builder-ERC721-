@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+const program = require('commander')
+
+program.usage('<command>')
+
+program.version(require('../package').version)
+
+program
+  .command('init')
+  .description('init a project')
+  .action(() => {
+    require('../commands/init')
+  })
+  
+program
+  .command('list')
+  .description('List the templateList')
+  .action(() => {
+    require('../commands/list')
+  })
+
+
+program.parse(process.argv)
+
+if (program.args.length == 0) {
+  console.log(`
+  Options:
+    -V, --version  output the version number 
+    -h, --help     output usage information
+  Commands:
+    init           init a project
+    list           List the templateList`
+  );
+}
+
+

@@ -1,0 +1,27 @@
+{
+  "name": "massless-cli",
+  "version": "1.0.0",
+  "description": "Massless smart contract builder cli for ERC721A NFT extensions",
+  "main": "index.js",
+  "bin": {
+    "massless-builder": "bin/massless"
+  },
+  "scripts": {
+    "dev": "node commands/init.js init hello",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cli-table": "^0.3.11",
+    "commander": "^2.20.3",
+    "download-git-repo": "^1.1.0",
+    "ethereum-address": "^0.0.4",
+    "inquirer": "^6.5.2",
+    "log-symbols": "^4.1.0",
+    "ncp": "^2.0.0",
+    "ora": "^3.4.0"
+  }
+}
